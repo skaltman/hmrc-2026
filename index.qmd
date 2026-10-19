@@ -47,9 +47,6 @@ https://skaltman.github.io/hmrc-2026/
 
 ::: notes
 llms open up data analysis to more people. it is now easier than ever to get _an_ answer to your data question, whether or not that answer is right
-
-but what if the user is not a data scientist?
-how do we help them get correct answers too?
 :::
 
 ## {#test-set .paper-slide}
@@ -60,11 +57,19 @@ how do we help them get correct answers too?
 This is something we've seen internally at Posit and in organizations we
 work with: it's becoming normal to vibe-analyze data.
 
-The idea for the hypothetical we'll see later came from this episode of
-The Test Set podcast.
+and this is a still from posit's podcast the test set where nell thomas talks about how she's been seeing this in her organization. 
+vibe analyzing in cursor 
+data people often are kind of rightfully horrified at the idea of vibe analyzing, but it is something we have to pay attention to! People are going to reach towards teh technology that gives them answers, and we have to replace their vibe analyzing with something.
 :::
 
 ## How good are models at data analysis? {#story-of-an-eval .beat-slide}
+
+
+:::notes
+before we talk about solutions, I want to take a step back and talk about some evals that we've done over the past year 
+and some thought on how good models actually currently are at 
+data analysis
+:::
 
 ```{r}
 #| include: false
@@ -503,9 +508,15 @@ That context might live in data dictionaries, semantic views, or in the mind
 of a coworker who has been at the organization for 20 years.
 
 Depending on your organization's setup, making that context available can be a lot of work in itself.
+
+your context may be really neat, well maintained, organized, or...
 :::
 
 ## {#context-messy-desk background-image="figures/wonderlane-6jA6eVsRJ6Q-unsplash.jpg"}
+
+:::notes
+it might feel something like this
+:::
 
 ::: footer
 <span style="color:#f5f1ec;">Photo: [Wonderlane](https://unsplash.com/@wonderlane), Unsplash</span>
@@ -514,8 +525,7 @@ Depending on your organization's setup, making that context available can be a l
 ## How do we make data analysis agents trustworthy? {#trust-question .deep-slide}
 
 ::: notes
-We can't get there just by choosing a good model and telling people to be
-careful. We have to build trustworthiness into the environment around it.
+so if models still are going to make mistakes and we have this context problem, how can we make data agents give us the right answers? how can we make them trustworthy?
 :::
 
 ## Two problems {#two-problems .two-problems-slide background-color="#dde6e4"}
@@ -532,8 +542,11 @@ careful. We have to build trustworthiness into the environment around it.
 ```
 
 ::: notes
-Two separate needs: help the agent get the analysis right, and help the user
-judge its basis. Commons is designed around both.
+and we actually have two problems 
+
+we need the model to run the right code, but
+if we know that it sometimes won't, we need a way to communicate levels of trust we have in that code to the user
+ESPECIALLY if that user isn't a data scientist themselves
 :::
 
 # {#commons .commons-intro-slide}
@@ -545,7 +558,7 @@ https://pos.it/commons
 :::
 
 ::: notes
-this is exactly the problem that commons is trying to solve
+these are exactly the problems that commons is trying to solve
 
 commons helps data scientists build trustworthy data agents for their collaborators that give more correct, reproducible, and transparent answers than the default "vibe analysis" siutation, while still being easy and intuitive to use. 
 
@@ -673,7 +686,10 @@ citations make the answer's grounding visible for the second.
 ## {#why-not-model-grade .paper-slide}
 
 ::: notes
-why not have the model assign the trust levels?
+commons deterministically tags the trust level. This isn't decided by the model. 
+Question: why not have the model assign the trust levels?
+
+models are great performers
 :::
 
 ## The answers look the same {#answers-look-the-same .paper-slide}
@@ -703,6 +719,8 @@ we have a clearly parabolic plot
 and three descriptions from the same model
 shared tone, shared style, shared length -- but different description each time
 if you didn't know what the plot looked like, you wouldn't be able to disentangle the correct ones from the incorrect ones
+
+we also did one experiment where we asked the model to report its confidence level...always said ~95%
 :::
 
 ## {#commons-trust-flow .trust-flow-slide .paper-slide}
@@ -779,7 +797,7 @@ Live demo: https://posit-devrel-agent.share.connect.posit.cloud/
 ::: {.columns}
 
 ::: {.column .header-text width="64%"}
-Clinical trials agent
+Clinical Trials Agent
 :::
 
 ::: {.column width="36%"}

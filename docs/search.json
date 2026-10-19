@@ -11,21 +11,21 @@
     "href": "index.html#non-data-scientist",
     "title": "",
     "section": "",
-    "text": "llms open up data analysis to more people. it is now easier than ever to get an answer to your data question, whether or not that answer is right\nbut what if the user is not a data scientist? how do we help them get correct answers too?"
+    "text": "llms open up data analysis to more people. it is now easier than ever to get an answer to your data question, whether or not that answer is right"
   },
   {
     "objectID": "index.html#test-set",
     "href": "index.html#test-set",
     "title": "",
     "section": "",
-    "text": "This is something we’ve seen internally at Posit and in organizations we work with: it’s becoming normal to vibe-analyze data.\nThe idea for the hypothetical we’ll see later came from this episode of The Test Set podcast."
+    "text": "This is something we’ve seen internally at Posit and in organizations we work with: it’s becoming normal to vibe-analyze data.\nand this is a still from posit’s podcast the test set where nell thomas talks about how she’s been seeing this in her organization. vibe analyzing in cursor data people often are kind of rightfully horrified at the idea of vibe analyzing, but it is something we have to pay attention to! People are going to reach towards teh technology that gives them answers, and we have to replace their vibe analyzing with something."
   },
   {
     "objectID": "index.html#story-of-an-eval",
     "href": "index.html#story-of-an-eval",
     "title": "",
     "section": "How good are models at data analysis?",
-    "text": "How good are models at data analysis?"
+    "text": "How good are models at data analysis?\n\nbefore we talk about solutions, I want to take a step back and talk about some evals that we’ve done over the past year and some thought on how good models actually currently are at data analysis"
   },
   {
     "objectID": "index.html#bluffbench-counterintuitive-plot",
@@ -102,21 +102,21 @@
     "href": "index.html#context-messy-desk",
     "title": "",
     "section": "",
-    "text": "Photo: Wonderlane, Unsplash"
+    "text": "it might feel something like this\n\n\nPhoto: Wonderlane, Unsplash"
   },
   {
     "objectID": "index.html#trust-question",
     "href": "index.html#trust-question",
     "title": "",
     "section": "How do we make data analysis agents trustworthy?",
-    "text": "How do we make data analysis agents trustworthy?\n\nWe can’t get there just by choosing a good model and telling people to be careful. We have to build trustworthiness into the environment around it."
+    "text": "How do we make data analysis agents trustworthy?\n\nso if models still are going to make mistakes and we have this context problem, how can we make data agents give us the right answers? how can we make them trustworthy?"
   },
   {
     "objectID": "index.html#two-problems",
     "href": "index.html#two-problems",
     "title": "",
     "section": "Two problems",
-    "text": "Two problems\n\n  \n    The model has to write the right code.\n  \n  \n    The user has to know how trustworthy the code is.\n  \n\n\nTwo separate needs: help the agent get the analysis right, and help the user judge its basis. Commons is designed around both."
+    "text": "Two problems\n\n  \n    The model has to write the right code.\n  \n  \n    The user has to know how trustworthy the code is.\n  \n\n\nand we actually have two problems\nwe need the model to run the right code, but if we know that it sometimes won’t, we need a way to communicate levels of trust we have in that code to the user ESPECIALLY if that user isn’t a data scientist themselves"
   },
   {
     "objectID": "index.html#commons-does-3-things",
@@ -151,21 +151,21 @@
     "href": "index.html#two-problems-revisited",
     "title": "",
     "section": "Two problems",
-    "text": "Two problems\n\n  \n    The model has to write the right code.\n    Trusted calculations and organizational context\n  \n  \n    The user has to know how trustworthy the code is.\n    Trust tags and verified citations\n  \n\n\nTrusted calculations and context help with the first problem; tags and checked citations make the answer’s grounding visible for the second."
+    "text": "Two problems\n\n  \n    The model has to write the right code.\n    Trusted calculations and organizational context\n  \n  \n    The user has to know how trustworthy the code is.\n    Trust tags and verified citations\n  \n\n\nTrusted calculations and context help with the first problem. tags and checked citations make the answer’s grounding visible for the second."
   },
   {
     "objectID": "index.html#why-not-model-grade",
     "href": "index.html#why-not-model-grade",
     "title": "",
     "section": "",
-    "text": "why not have the model assign the trust levels?"
+    "text": "commons deterministically tags the trust level. This isn’t decided by the model. Question: why not have the model assign the trust levels?\nmodels are great performers"
   },
   {
     "objectID": "index.html#answers-look-the-same",
     "href": "index.html#answers-look-the-same",
     "title": "",
     "section": "The answers look the same",
-    "text": "The answers look the same\n\n\n\n\n ❌\n\n\n ✅\n\n\n ❌\n\n\n\n\nThe problem with this performance just that the model is sometimes wrong, it’s that the wrong answers are confident and can be indistinguishable from the right ones\nwe have a clearly parabolic plot and three descriptions from the same model shared tone, shared style, shared length – but different description each time if you didn’t know what the plot looked like, you wouldn’t be able to disentangle the correct ones from the incorrect ones"
+    "text": "The answers look the same\n\n\n\n\n ❌\n\n\n ✅\n\n\n ❌\n\n\n\n\nThe problem with this performance just that the model is sometimes wrong, it’s that the wrong answers are confident and can be indistinguishable from the right ones\nwe have a clearly parabolic plot and three descriptions from the same model shared tone, shared style, shared length – but different description each time if you didn’t know what the plot looked like, you wouldn’t be able to disentangle the correct ones from the incorrect ones\nwe also did one experiment where we asked the model to report its confidence level…always said ~95%"
   },
   {
     "objectID": "index.html#commons-trust-flow",
