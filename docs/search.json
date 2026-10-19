@@ -116,7 +116,7 @@
     "href": "index.html#two-problems",
     "title": "",
     "section": "Two problems",
-    "text": "Two problems\n\n  \n    The model has to write the right code.\n  \n  \n    The user has to know how trustworthy the code is."
+    "text": "Two problems\n\n  \n    The model has to write the right code.\n  \n  \n    The user has to know how trustworthy the code is.\n  \n\n\nTwo separate needs: help the agent get the analysis right, and help the user judge its basis. Commons is designed around both."
   },
   {
     "objectID": "index.html#commons-does-3-things",
@@ -151,7 +151,7 @@
     "href": "index.html#two-problems-revisited",
     "title": "",
     "section": "Two problems",
-    "text": "Two problems\n\n  \n    The model has to write the right code.\n    Trusted calculations and organizational context\n  \n  \n    The user has to know how trustworthy the code is.\n    Trust tags and verified citations"
+    "text": "Two problems\n\n  \n    The model has to write the right code.\n    Trusted calculations and organizational context\n  \n  \n    The user has to know how trustworthy the code is.\n    Trust tags and verified citations\n  \n\n\nTrusted calculations and context help with the first problem; tags and checked citations make the answer’s grounding visible for the second."
   },
   {
     "objectID": "index.html#why-not-model-grade",
@@ -180,6 +180,13 @@
     "title": "",
     "section": "",
     "text": "DevRel Agent\n\n\nhttps://github.com/posit-dev/devrel-agent\n\n\nLive demo: https://posit-devrel-agent.share.connect.posit.cloud/"
+  },
+  {
+    "objectID": "index.html#aml-agent",
+    "href": "index.html#aml-agent",
+    "title": "",
+    "section": "",
+    "text": "AML Agent"
   },
   {
     "objectID": "index.html#commons-lifecycle",
@@ -214,7 +221,7 @@
     "href": "index.html#build-semantic",
     "title": "",
     "section": "Build: information layers",
-    "text": "Build: information layers\n\n\nTrusted calculations specify how an answer is computed. Define vetted R or Python functions as measures in scripts.\nThe semantic layer collects the vetted calculations the agent prefers to use. Functions documented with @measure become measures; the roxygen description and @param tags become the tool’s description and arguments.\nThe enrollment example is illustrative, not a statement about J&J’s definitions. The point is to reuse the team’s calculation rather than have the model reinvent its logic for each question. Measures can contain ordinary R code; they do not have to contain SQL or a dbGetQuery call. The same trusted calculations can also come from data dictionary definitions, Snowflake semantic views, or Databricks metric views."
+    "text": "Build: information layers\n\n\nTrusted calculations specify how an answer is computed. Define vetted R or Python functions as measures in scripts.\nThe semantic layer collects the vetted calculations the agent prefers to use. Functions documented with @measure become measures; the roxygen description and @param tags become the tool’s description and arguments.\nThe enrollment example uses illustrative definitions. The point is to reuse the team’s calculation rather than have the model reinvent its logic for each question. Measures can contain ordinary R code; they do not have to contain SQL or a dbGetQuery call. The same trusted calculations can also come from data dictionary definitions, Snowflake semantic views, or Databricks metric views."
   },
   {
     "objectID": "index.html#build-context",
@@ -228,7 +235,7 @@
     "href": "index.html#build-agent",
     "title": "",
     "section": "Build",
-    "text": "Build\nPutting the pieces together\nlibrary(commons)\n\nagent &lt;- commons(\n  ellmer::chat_anthropic(),\n  data_sources = data_source(trials = trials),\n  semantic_layer = semantic_layer(\"R/measures.R\"),\n  context_layer = context_layer(files = \"context/protocol-conventions.md\")\n)\n\ncommons_app(agent)\n\nThis assembles a chat client, data source, semantic layer, and context layer; commons wraps them with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.\nThe R/measures.R and context/protocol-conventions.md paths illustrate existing files that supply vetted R measures and organizational context. This is not a self-contained runnable example without those files and its data.\n\n\nThis is the whole agent: a chat client, a data source, and commons wraps it with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.\nThe data source here is a data frame (a clinical trials table), which commons loads into an in-process DuckDB database. The semantic and context layers are optional and grow over time – start with a small working scope and expand."
+    "text": "Build\nPutting the pieces together\nlibrary(commons)\n\nagent &lt;- commons(\n  ellmer::chat_anthropic(),\n  data_sources = data_source(trials = trials),\n  semantic_layer = semantic_layer(\"R/measures.R\"),\n  context_layer = context_layer(files = \"context/protocol-conventions.md\")\n)\n\ncommons_app(agent)\n\nThis assembles a chat client, data source, semantic layer, and context layer; commons wraps them with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.\nThe data source here is a data frame (a clinical trials table), which commons loads into an in-process DuckDB database. The semantic and context layers are optional and grow over time – start with a small working scope and expand.\nThe R/measures.R and context/protocol-conventions.md paths illustrate existing files that supply vetted R measures and organizational context. This is not a self-contained runnable example without those files and its data."
   },
   {
     "objectID": "index.html#build-warehouse",

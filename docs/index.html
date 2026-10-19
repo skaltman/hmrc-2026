@@ -571,6 +571,19 @@ Can models interpret plots that contradict their expectations?
     <p class="problem-statement">The user has to know how trustworthy the code is.</p>
   </div>
 </div>
+<aside class="notes">
+<p>Two separate needs: help the agent get the analysis right, and help the user judge its basis. Commons is designed around both.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section id="commons" class="title-slide slide level1 commons-intro-slide center">
 <h1></h1>
@@ -717,6 +730,19 @@ Can models interpret plots that contradict their expectations?
     <p class="problem-solution fragment" data-fragment-index="1">Trust tags and verified citations</p>
   </div>
 </div>
+<aside class="notes">
+<p>Trusted calculations and context help with the first problem; tags and checked citations make the answer’s grounding visible for the second.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="why-not-model-grade" class="slide level2 paper-slide">
 <h2></h2>
@@ -863,6 +889,13 @@ Can models interpret plots that contradict their expectations?
 <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 </section>
+<section id="aml-agent" class="slide level2 header-slide deep-slide">
+<h2></h2>
+<div class="columns">
+<div class="column header-text" style="width:64%;">
+<p>AML Agent</p>
+</div></div>
+</section>
 <section id="commons-lifecycle" class="slide level2 lifecycle-slide paper-slide">
 <h2></h2>
 <div class="lifecycle-cards">
@@ -946,7 +979,7 @@ Can models interpret plots that contradict their expectations?
 <aside class="notes">
 <p>Trusted calculations specify how an answer is computed. Define vetted R or Python functions as measures in scripts.</p>
 <p>The semantic layer collects the vetted calculations the agent prefers to use. Functions documented with <span class="citation" data-cites="measure">@measure</span> become measures; the roxygen description and <span class="citation" data-cites="param">@param</span> tags become the tool’s description and arguments.</p>
-<p>The enrollment example is illustrative, not a statement about J&amp;J’s definitions. The point is to reuse the team’s calculation rather than have the model reinvent its logic for each question. Measures can contain ordinary R code; they do not have to contain SQL or a dbGetQuery call. The same trusted calculations can also come from data dictionary definitions, Snowflake semantic views, or Databricks metric views.</p>
+<p>The enrollment example uses illustrative definitions. The point is to reuse the team’s calculation rather than have the model reinvent its logic for each question. Measures can contain ordinary R code; they do not have to contain SQL or a dbGetQuery call. The same trusted calculations can also come from data dictionary definitions, Snowflake semantic views, or Databricks metric views.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -993,21 +1026,8 @@ Can models interpret plots that contradict their expectations?
 <span id="cb1-10"><a></a><span class="fu">commons_app</span>(agent)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>This assembles a chat client, data source, semantic layer, and context layer; commons wraps them with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.</p>
-<p>The <code>R/measures.R</code> and <code>context/protocol-conventions.md</code> paths illustrate existing files that supply vetted R measures and organizational context. This is not a self-contained runnable example without those files and its data.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<aside class="notes">
-<p>This is the whole agent: a chat client, a data source, and commons wraps it with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.</p>
 <p>The data source here is a data frame (a clinical trials table), which commons loads into an in-process DuckDB database. The semantic and context layers are optional and grow over time – start with a small working scope and expand.</p>
+<p>The <code>R/measures.R</code> and <code>context/protocol-conventions.md</code> paths illustrate existing files that supply vetted R measures and organizational context. This is not a self-contained runnable example without those files and its data.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1177,6 +1197,9 @@ Can models interpret plots that contradict their expectations?
       </a>
       <a href="https://github.com/posit-dev/devrel-agent">
         <span class="thank-you-demo-url">https://github.com/<wbr>posit-dev/<wbr>devrel-agent</span>
+      </a>
+      <a href="https://posit-aml-agent.share.connect.posit.cloud">
+        <span class="thank-you-demo-url">https://posit-aml-agent.<wbr>share.connect.posit.cloud</span>
       </a>
     </div>
     <a class="thank-you-resource thank-you-link-card thank-you-newsletter-card" href="https://pos.it/ai-newsletter">

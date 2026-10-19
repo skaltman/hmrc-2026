@@ -51,7 +51,8 @@ helps the user judge how trustworthy it is.
   confidence score.
 * Trusted code: reuse calculations that data scientists already vet and
   maintain, supported by organizational context.
-* Demos: devrel agent; clinical-trials agent (existing demo slides + recording).
+* Demos: devrel agent; clinical-trials agent (existing demo slides + recording);
+  AML Agent (title-only demo slide).
 * Build / Deploy / Improve lifecycle:
     * Build: trusted calculations, data, and context (skill, cake photo,
       three progressive layer diagrams, agent and warehouse code examples).

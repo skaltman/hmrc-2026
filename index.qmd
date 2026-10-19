@@ -531,6 +531,11 @@ careful. We have to build trustworthiness into the environment around it.
 </div>
 ```
 
+::: notes
+Two separate needs: help the agent get the analysis right, and help the user
+judge its basis. Commons is designed around both.
+:::
+
 # {#commons .commons-intro-slide}
 
 ![](figures/commons-hex.png){.commons-intro-logo .nostretch fig-alt="Commons logo"}
@@ -660,6 +665,11 @@ agent, we signal that the user ought to be more skeptical of the answer.
 </div>
 ```
 
+::: notes
+Trusted calculations and context help with the first problem. tags and checked
+citations make the answer's grounding visible for the second.
+:::
+
 ## {#why-not-model-grade .paper-slide}
 
 ::: notes
@@ -788,6 +798,16 @@ Clinical trials agent
   <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 
+## {#aml-agent .header-slide .deep-slide}
+
+::: {.columns}
+
+::: {.column .header-text width="64%"}
+AML Agent
+:::
+
+:::
+
 ## {#commons-lifecycle .lifecycle-slide .paper-slide}
 
 ::: {.lifecycle-cards}
@@ -866,7 +886,7 @@ The semantic layer collects the vetted calculations the agent prefers to
 use. Functions documented with @measure become measures; the roxygen
 description and @param tags become the tool's description and arguments.
 
-The enrollment example is illustrative, not a statement about J&J's definitions.
+The enrollment example uses illustrative definitions.
 The point is to reuse the team's calculation rather than have the model
 reinvent its logic for each question. Measures can contain ordinary R code;
 they do not have to contain SQL or a dbGetQuery call.
@@ -910,19 +930,13 @@ This assembles a chat client, data source, semantic layer, and context layer;
 commons wraps them with trusted-calculation tools, context search, provenance
 marking, and a sandboxed R session.
 
-The `R/measures.R` and `context/protocol-conventions.md` paths illustrate
-existing files that supply vetted R measures and organizational context. This
-is not a self-contained runnable example without those files and its data.
-:::
-
-::: notes
-This is the whole agent: a chat client, a data source, and commons wraps it
-with trusted-calculation tools, context search, provenance marking, and a
-sandboxed R session.
-
 The data source here is a data frame (a clinical trials table), which commons
 loads into an in-process DuckDB database. The semantic and context layers are
 optional and grow over time -- start with a small working scope and expand.
+
+The `R/measures.R` and `context/protocol-conventions.md` paths illustrate
+existing files that supply vetted R measures and organizational context. This
+is not a self-contained runnable example without those files and its data.
 :::
 
 ## Build {#build-warehouse .paper-slide}
@@ -1051,6 +1065,9 @@ we've learned from years of code for analysis that code is great for this
       </a>
       <a href="https://github.com/posit-dev/devrel-agent">
         <span class="thank-you-demo-url">https://github.com/<wbr>posit-dev/<wbr>devrel-agent</span>
+      </a>
+      <a href="https://posit-aml-agent.share.connect.posit.cloud">
+        <span class="thank-you-demo-url">https://posit-aml-agent.<wbr>share.connect.posit.cloud</span>
       </a>
     </div>
     <a class="thank-you-resource thank-you-link-card thank-you-newsletter-card" href="https://pos.it/ai-newsletter">
