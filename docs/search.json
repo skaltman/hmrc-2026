@@ -116,7 +116,7 @@
     "href": "index.html#two-problems",
     "title": "",
     "section": "Two problems",
-    "text": "Two problems\n\n  \n    01\n    The model has to write the right code.\n  \n  \n    02\n    The user has to know how trustworthy the code is."
+    "text": "Two problems\n\n  \n    The model has to write the right code.\n  \n  \n    The user has to know how trustworthy the code is."
   },
   {
     "objectID": "index.html#commons-does-3-things",
@@ -150,8 +150,8 @@
     "objectID": "index.html#two-problems-revisited",
     "href": "index.html#two-problems-revisited",
     "title": "",
-    "section": "Two problems, revisited",
-    "text": "Two problems, revisited\n\n  \n    01\n    The model has to write the right code.\n    Trusted calculations + organizational context\n  \n  \n    02\n    The user has to know how trustworthy the code is.\n    Execution-based tags + checked context citations"
+    "section": "Two problems",
+    "text": "Two problems\n\n  \n    The model has to write the right code.\n    Trusted calculations and organizational context\n  \n  \n    The user has to know how trustworthy the code is.\n    Trust tags and verified citations"
   },
   {
     "objectID": "index.html#why-not-model-grade",
