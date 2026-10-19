@@ -826,6 +826,10 @@ AML Agent
 
 :::
 
+::: {.footer .clinical-trials-header-footer}
+[https://posit-aml-agent.share.connect.posit.cloud](https://posit-aml-agent.share.connect.posit.cloud)
+:::
+
 ## {#commons-lifecycle .lifecycle-slide .paper-slide}
 
 ::: {.lifecycle-cards}
