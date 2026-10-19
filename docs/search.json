@@ -1,0 +1,268 @@
+[
+  {
+    "objectID": "index.html#title",
+    "href": "index.html#title",
+    "title": "",
+    "section": "",
+    "text": "Trustworthy data agents with commons\n\nSara Altman\nHMRC October 20, 2026\n\n\n\n\n\n\nhttps://skaltman.github.io/hmrc-2026/"
+  },
+  {
+    "objectID": "index.html#non-data-scientist",
+    "href": "index.html#non-data-scientist",
+    "title": "",
+    "section": "",
+    "text": "llms open up data analysis to more people. it is now easier than ever to get an answer to your data question, whether or not that answer is right\nbut what if the user is not a data scientist? how do we help them get correct answers too?"
+  },
+  {
+    "objectID": "index.html#test-set",
+    "href": "index.html#test-set",
+    "title": "",
+    "section": "",
+    "text": "This is something we’ve seen internally at Posit and in organizations we work with: it’s becoming normal to vibe-analyze data.\nThe idea for the hypothetical we’ll see later came from this episode of The Test Set podcast."
+  },
+  {
+    "objectID": "index.html#story-of-an-eval",
+    "href": "index.html#story-of-an-eval",
+    "title": "",
+    "section": "How good are models at data analysis?",
+    "text": "How good are models at data analysis?"
+  },
+  {
+    "objectID": "index.html#bluffbench-counterintuitive-plot",
+    "href": "index.html#bluffbench-counterintuitive-plot",
+    "title": "",
+    "section": "",
+    "text": "Model: “There’s a strong positive relationship between carat and price!”\n\n\nCan models interpret plots that contradict their expectations?\n\n\naround a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one, which plots diamonds and asked them to interpret them and they said stuff like this: and that sounds good until you release: that is not …\nthis is what we wanted to know: would models correctly interpret plots that contradicted their expectations?"
+  },
+  {
+    "objectID": "index.html#bluffbench-november-2025",
+    "href": "index.html#bluffbench-november-2025",
+    "title": "",
+    "section": "November 2025",
+    "text": "November 2025\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench\n\n\nWe tried a range of interventions to improve these scores, but none moved them much."
+  },
+  {
+    "objectID": "index.html#bluffbench-september-2026",
+    "href": "index.html#bluffbench-september-2026",
+    "title": "",
+    "section": "September 2026",
+    "text": "September 2026\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench\n\n\nThe newer models did substantially better on this eval. This was a failure that worried us, and interventions hadn’t helped much. Model improvements changed the results, so our assessment needs to change too."
+  },
+  {
+    "objectID": "index.html#models-got-better",
+    "href": "index.html#models-got-better",
+    "title": "",
+    "section": "The models got better",
+    "text": "The models got better"
+  },
+  {
+    "objectID": "index.html#rising-tide",
+    "href": "index.html#rising-tide",
+    "title": "",
+    "section": "A rising tide lifts some of the boats",
+    "text": "A rising tide lifts some of the boats\n\nPhoto: Vidar Nordli-Mathisen, Unsplash"
+  },
+  {
+    "objectID": "index.html#frontier-model-not-enough",
+    "href": "index.html#frontier-model-not-enough",
+    "title": "",
+    "section": "But this doesn’t mean everything is solved",
+    "text": "But this doesn’t mean everything is solved"
+  },
+  {
+    "objectID": "index.html#bluffbench2-data-artifact",
+    "href": "index.html#bluffbench2-data-artifact",
+    "title": "",
+    "section": "",
+    "text": "github.com/posit-dev/bluffbench2\n\n\nwe showed them plots that look like this take a look at this plot. what do you notice?\none thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.\nwe wanted to see if models would be able to pick up on this kind of subtle visual artifact"
+  },
+  {
+    "objectID": "index.html#bluffbench2-results",
+    "href": "index.html#bluffbench2-results",
+    "title": "",
+    "section": "",
+    "text": "github.com/posit-dev/bluffbench2\n\n\nModels have improved, but not every capability has improved equally."
+  },
+  {
+    "objectID": "index.html#llms-are-jagged",
+    "href": "index.html#llms-are-jagged",
+    "title": "",
+    "section": "LLMs are jagged",
+    "text": "LLMs are jagged\n\n\na year ago, we often told people about the jaggedness of llms strengths in one task don’t tell us everything about performance on another."
+  },
+  {
+    "objectID": "index.html#capability-profiles",
+    "href": "index.html#capability-profiles",
+    "title": "",
+    "section": "",
+    "text": "now I might explain it more like this where a model has different strengths in different areas and maybe some weird behaviors but also this varies model by model and version by version\none reason i would now not say “use the best model available” but instead use the least expensive model that does a sufficient job at your task, and switch depending on the task."
+  },
+  {
+    "objectID": "index.html#context-messy-desk",
+    "href": "index.html#context-messy-desk",
+    "title": "",
+    "section": "",
+    "text": "Photo: Wonderlane, Unsplash"
+  },
+  {
+    "objectID": "index.html#trust-question",
+    "href": "index.html#trust-question",
+    "title": "",
+    "section": "How do we make data analysis agents trustworthy?",
+    "text": "How do we make data analysis agents trustworthy?\n\nWe can’t get there just by choosing a good model and telling people to be careful. We have to build trustworthiness into the environment around it."
+  },
+  {
+    "objectID": "index.html#two-problems",
+    "href": "index.html#two-problems",
+    "title": "",
+    "section": "Two problems",
+    "text": "Two problems\n\n  \n    01\n    The model has to write the right code.\n  \n  \n    02\n    The user has to know how trustworthy the code is."
+  },
+  {
+    "objectID": "index.html#commons-does-3-things",
+    "href": "index.html#commons-does-3-things",
+    "title": "",
+    "section": "commons does 3 things",
+    "text": "commons does 3 things\n\nExtract trusted calculations from existing artifacts into a data structure\nA harness to give the right context at the right time\nA feedback loop to push more queries up the trust ladder over time"
+  },
+  {
+    "objectID": "index.html#commons-trusted-calculation",
+    "href": "index.html#commons-trusted-calculation",
+    "title": "",
+    "section": "",
+    "text": "Let’s see it in action\nThe first thing the agent does is search for a trusted calculation. Here it finds and runs a trusted site traffic calculation.\nThe answer is marked as verified to signify that it used vetted code."
+  },
+  {
+    "objectID": "index.html#commons-context-citations",
+    "href": "index.html#commons-context-citations",
+    "title": "",
+    "section": "",
+    "text": "However, it’s unlikely that trusted code will cover all questions a user might have. For these situations, the agent can write custom R, Python, or SQL.\nFirst, the agent looks through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.\nThen, it writes whatever code it needs to find an answer.\nFinally, when it presents an answer, it can provide a citation to that context. The citation is deterministically checked against trusted context that has appeared in the conversation – if it matches, a citation tag is shown."
+  },
+  {
+    "objectID": "index.html#commons-lower-trust-answer",
+    "href": "index.html#commons-lower-trust-answer",
+    "title": "",
+    "section": "",
+    "text": "There’s one more possible path: the model cannot find trusted context to justify its approach. In this case, we mark the answer with a yellow tag, which lets the user know the answer should be considered less trusted.\nThe tool has to feel convenient enough that the user actually wants to reach for it – it needs to feel like a normal chat. When correctness is closer to a normal coding agent, we signal that the user ought to be more skeptical of the answer."
+  },
+  {
+    "objectID": "index.html#two-problems-revisited",
+    "href": "index.html#two-problems-revisited",
+    "title": "",
+    "section": "Two problems, revisited",
+    "text": "Two problems, revisited\n\n  \n    01\n    The model has to write the right code.\n    Trusted calculations + organizational context\n  \n  \n    02\n    The user has to know how trustworthy the code is.\n    Execution-based tags + checked context citations"
+  },
+  {
+    "objectID": "index.html#why-not-model-grade",
+    "href": "index.html#why-not-model-grade",
+    "title": "",
+    "section": "",
+    "text": "why not have the model assign the trust levels?"
+  },
+  {
+    "objectID": "index.html#answers-look-the-same",
+    "href": "index.html#answers-look-the-same",
+    "title": "",
+    "section": "The answers look the same",
+    "text": "The answers look the same\n\n\n\n\n ❌\n\n\n ✅\n\n\n ❌\n\n\n\n\nThe problem with this performance just that the model is sometimes wrong, it’s that the wrong answers are confident and can be indistinguishable from the right ones\nwe have a clearly parabolic plot and three descriptions from the same model shared tone, shared style, shared length – but different description each time if you didn’t know what the plot looked like, you wouldn’t be able to disentangle the correct ones from the incorrect ones"
+  },
+  {
+    "objectID": "index.html#commons-trust-flow",
+    "href": "index.html#commons-trust-flow",
+    "title": "",
+    "section": "",
+    "text": "Search trusted calculations\n  \n    Find one↓\n    Don’t find one↓\n  \n  \n    \n      Run trusted calculation\n      ↓\n      \n        \n      \n    \n    \n      Search context\n      ↓\n      Write SQL/R/Python\n      \n        Cite↓\n        Don’t cite↓\n      \n      \n        \n          \n        \n        \n          \n        \n      \n    \n  \n\n\nCommons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic\nThe citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source."
+  },
+  {
+    "objectID": "index.html#devrel-agent",
+    "href": "index.html#devrel-agent",
+    "title": "",
+    "section": "",
+    "text": "DevRel Agent\n\n\nhttps://github.com/posit-dev/devrel-agent\n\n\nLive demo: https://posit-devrel-agent.share.connect.posit.cloud/"
+  },
+  {
+    "objectID": "index.html#commons-lifecycle",
+    "href": "index.html#commons-lifecycle",
+    "title": "",
+    "section": "",
+    "text": "Build\nYou construct the agent by hooking it up to trusted code.\n\n\nDeploy\nYour colleagues use the agent deployed on Connect.\n\n\nImprove\nYou review the agent’s behavior, adding trusted code to cover common use cases.\n\n\n\nAfter seeing the agents in action, what does this look like for the person building and maintaining them?\nBuild: connect vetted calculations, data, and organizational context. Deploy: make the agent available to collaborators, for example on Connect. Improve: review its behavior and add calculations or context for recurring questions."
+  },
+  {
+    "objectID": "index.html#build-onboarding",
+    "href": "index.html#build-onboarding",
+    "title": "",
+    "section": "Build: the commons skill",
+    "text": "Build: the commons skill\n\nUse a coding agent plus the built-in commons skill to parse through your data and code and build a commons agent.\n\n\nhttps://posit-dev.github.io/commons/r/articles/commons.html#working-with-the-agent-skill\n\n\nThe commons package ships as a skill for coding agents (Posit Assistant, Claude Code, Codex)."
+  },
+  {
+    "objectID": "index.html#information-layers-photo",
+    "href": "index.html#information-layers-photo",
+    "title": "",
+    "section": "Information Layers",
+    "text": "Information Layers\n\nPhoto: Olga Petnyunene, Unsplash"
+  },
+  {
+    "objectID": "index.html#information-layers",
+    "href": "index.html#information-layers",
+    "title": "",
+    "section": "Build: information layers",
+    "text": "Build: information layers\n\n\nThese layers complement the data source. The semantic layer supplies trusted ways to compute answers. The context layer helps the agent write custom SQL or R and interpret the results when a trusted calculation doesn’t cover the question.\nData dictionaries can contribute to both: calculation definitions to the semantic layer, and descriptive information to the context layer."
+  },
+  {
+    "objectID": "index.html#build-semantic",
+    "href": "index.html#build-semantic",
+    "title": "",
+    "section": "Build: information layers",
+    "text": "Build: information layers\n\n\nTrusted calculations specify how an answer is computed. Define vetted R or Python functions as measures in scripts.\nThe semantic layer collects the vetted calculations the agent prefers to use. Functions documented with @measure become measures; the roxygen description and @param tags become the tool’s description and arguments.\nThe enrollment example is illustrative, not a statement about J&J’s definitions. The point is to reuse the team’s calculation rather than have the model reinvent its logic for each question. Measures can contain ordinary R code; they do not have to contain SQL or a dbGetQuery call. The same trusted calculations can also come from data dictionary definitions, Snowflake semantic views, or Databricks metric views."
+  },
+  {
+    "objectID": "index.html#build-context",
+    "href": "index.html#build-context",
+    "title": "",
+    "section": "Build: information layers",
+    "text": "Build: information layers\n\n\nThe context layer explains what the data means and how to interpret it.\nMarkdown files and descriptive entries in data dictionaries supply context: what columns mean, terminology, conventions, and limitations.\nData dictionaries can serve both layers: descriptive fields supply context, while calculation definitions supply the semantic layer."
+  },
+  {
+    "objectID": "index.html#build-agent",
+    "href": "index.html#build-agent",
+    "title": "",
+    "section": "Build",
+    "text": "Build\nPutting the pieces together\nlibrary(commons)\n\nagent &lt;- commons(\n  ellmer::chat_anthropic(),\n  data_sources = data_source(trials = trials),\n  semantic_layer = semantic_layer(\"R/measures.R\"),\n  context_layer = context_layer(files = \"context/protocol-conventions.md\")\n)\n\ncommons_app(agent)\n\nThis assembles a chat client, data source, semantic layer, and context layer; commons wraps them with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.\nThe R/measures.R and context/protocol-conventions.md paths illustrate existing files that supply vetted R measures and organizational context. This is not a self-contained runnable example without those files and its data.\n\n\nThis is the whole agent: a chat client, a data source, and commons wraps it with trusted-calculation tools, context search, provenance marking, and a sandboxed R session.\nThe data source here is a data frame (a clinical trials table), which commons loads into an in-process DuckDB database. The semantic and context layers are optional and grow over time – start with a small working scope and expand."
+  },
+  {
+    "objectID": "index.html#build-warehouse",
+    "href": "index.html#build-warehouse",
+    "title": "",
+    "section": "Build",
+    "text": "Build\nDatabricks and Snowflake\n# Snowflake semantic view\nwarehouse &lt;- data_source(\n  snowflake_con, tables = \"ANALYTICS.TRIAL_ENROLLMENT\"\n)\n\n# Or: Databricks metric view\nwarehouse &lt;- data_source(\n  databricks_con, tables = \"clinical.trial_enrollment_metrics\"\n)\n\nagent &lt;- commons(\n  ellmer::chat_anthropic(),\n  data_sources = list(warehouse = warehouse),\n  context_layer = context_layer(files = \"context/protocol-conventions.md\")\n)\n\nSemantic layer: Snowflake semantic views or Databricks metric views, imported through data_source()\n\n\nThe two warehouse objects above supply trusted metrics and dimensions: Snowflake calls them semantic views; Databricks calls them metric views. commons imports these through the data source, so they do not require a separate semantic_layer() call.\nWarehouse models need not supply only calculations: the Databricks integration also imports descriptive context from metric views. Do not present warehouse metadata and context as mutually exclusive categories.\n\nContext: warehouse models can also supply descriptive information. Add additional information to Markdown files and data dictionaries"
+  },
+  {
+    "objectID": "index.html#deploy-connect",
+    "href": "index.html#deploy-connect",
+    "title": "",
+    "section": "Deploy",
+    "text": "Deploy\n\nDeploy like any other Shiny app.\n(Optional) Enable built in trajectory-logging.\nEnforce access with warehouse permissions and per-viewer credentials.\n\n\nCreate DBI connections and the agent inside the Shiny server for each session, using Connect viewer OAuth. The supplied connection enforces warehouse row-level security and table- and column-level policies."
+  },
+  {
+    "objectID": "index.html#trajectory-review",
+    "href": "index.html#trajectory-review",
+    "title": "",
+    "section": "Improve: analyze trajectories",
+    "text": "Improve: analyze trajectories\n\ncommons(log = TRUE) records conversation histories with OpenTelemetry.\ntrajectory_read() reads trajectories from Connect or local traces.\ntrajectory_review() opens a Shiny app to browse, flag, and annotate conversations.\n\n\nWe’ll demo the trajectory reviewer here. Reviewed conversations surface recurring questions, then you add trusted calculations or context. The goal is to improve the system, not just ask users to check answers more carefully. These reviewer functions are in the R package.\nGo to trajectory reviewer\nhttps://01a13e15-380b-24ec-91a0-f7e07302f411.share.connect.posit.cloud/"
+  },
+  {
+    "objectID": "index.html#code-as-the-foundation",
+    "href": "index.html#code-as-the-foundation",
+    "title": "",
+    "section": "Code as the foundation",
+    "text": "Code as the foundation\n\nLLMs are good at writing code\nReproducible, transparent, auditable\n\n\nthe primary thing, that might seem obvious but isn’t always obvious is that the model needs to write code\nas much as possible, get it to write code does the agent have to run code? no – it could do things “in its head,” but then you lose reproducibility and transparency.\nllms are good at code\nwe’ve learned from years of code for analysis that code is great for this"
+  },
+  {
+    "objectID": "index.html#ecosystem",
+    "href": "index.html#ecosystem",
+    "title": "",
+    "section": "Which tool is which?",
+    "text": "Which tool is which?\n\n\n\n\nUse\n\n\n\n\nPosit Assistant\nGet help with coding and data analysis in your development environment\n\n\ncommons\nBuild general data-analysis agents for colleagues, grounded in your team’s trusted code\n\n\nshinychat\nBuild custom Shiny apps with chat components\n\n\nquerychat\nExplore tabular data through SQL-powered chat"
+  }
+]
